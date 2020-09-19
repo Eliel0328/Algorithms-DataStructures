@@ -25,31 +25,31 @@ void displayGraph(graph &A, int n){                     //  Mostrar el contenido
     }
 }
 
-void BFS(graph &A, vbool &visited, vint &path, int at){
-    queue<int> q;
+void BFS(graph &A, vbool &visited, vint &path, int at){     //  Iniciar recorrido BFS   
+    queue<int> q;                                       //  Cola para recorrido
     q.push(at);
-    visited[at] = true;
+    visited[at] = true;                 
 
-    while(!q.empty()){
+    while(!q.empty()){                                  //  Mientras no recorramos todo el grafo
         int node = q.front();
         cout << node <<  " ";
         q.pop();
-        for(auto next: A[node]){
+        for(auto next: A[node]){                        //  Visitar vecinos
             if(!visited[next]){
                 q.push(next);
-                visited[next] = true;
+                visited[next] = true;                   //  Marcar como visitados
                 path[next] = node;
             }
         }
     }
 }
 
-void reconstructPath(vint &prev, int start, int end){
+void reconstructPath(vint &prev, int start, int end){       //  Reconstruir el camino
     vector<int> path;
     int i = 0;  int at;
 
-    for(at = end; at != start; at = prev[at]){
-        if(i < prev.size()){
+    for(at = end; at != start; at = prev[at]){              //  Recorrer el posible camino
+        if(i < prev.size()){                                //  Abortar si no se encuentra
             ++i;
             path.push_back(at);
         }
@@ -57,10 +57,10 @@ void reconstructPath(vint &prev, int start, int end){
             break;
     }
 
-    if(prev[at] == start){
+    if(prev[at] == start){                                  //  Comprobar si llegamos al inicio
         path.push_back(at);
-        reverse(path.begin(), path.end());
-        for(auto x: path)
+        reverse(path.begin(), path.end());          
+        for(auto x: path)                                   //  Mostrar el recorrido
             cout << x << " ";
     }
 
@@ -70,7 +70,7 @@ void startBFS(graph &A, int n, int m){                  //  Iniciar BFS
     vector<bool> visited(n);                            //  Vector para nodos visitados
     vector<int> path(n);                                //  Vector para reconstruir ruta
     int start_node = 0;                                 //  Nodo inicial
-    int end_node = 5;                                  //  Nodo final
+    int end_node = 5;                                   //  Nodo final
     
     BFS(A, visited, path, start_node);                  //  Iniciar
     cout << "\n";

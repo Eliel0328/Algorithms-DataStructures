@@ -34,7 +34,7 @@ void BFS(graph &A, vbool &visited, int at){     //  Inicializar BFS
         cout << node <<  " ";
         q.pop();
         
-        for(auto next: A[node]){                //  Visitar a sus vecinos y marcalor como tal
+        for(auto next: A[node]){                //  Visitar a sus vecinos y marcalo como tal
             if(!visited[next]){
                 q.push(next);
                 visited[next] = true;
