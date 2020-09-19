@@ -17,3 +17,4 @@
 ##  Graph Theory
 
 * Grafo (Maneras de representar un grafo)
+* DFS (Depth First Search Algorithm)
