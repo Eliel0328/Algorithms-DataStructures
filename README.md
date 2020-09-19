@@ -1,6 +1,6 @@
-#   Estructura de datos
+#   Repositorio para almacenar Algoritmos y Estructura de datos
 
-Estructuras de datos    
+##  Data Structures
 
 * Linked list (usando Doble apuntador)
 * Queue (usando Doble apuntador)
@@ -9,3 +9,7 @@ Estructuras de datos
 * Union Find (implementado con vectores y usando compresión de caminos)
 * Binary search tree
 * Hash Table(usando un vector de listas)
+
+##  Sorting
+
+* Insertion Sort
