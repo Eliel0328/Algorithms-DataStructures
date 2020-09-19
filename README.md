@@ -13,3 +13,7 @@
 ##  Sorting
 
 * Insertion Sort
+
+##  Graph Theory
+
+* Grafo (Maneras de representar un grafo)
