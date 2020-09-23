@@ -8,4 +8,5 @@ Estructuras de datos
 * Priority-Queue (usando un vector STL)
 * Union Find (implementado con vectores y usando compresión de caminos)
 * Binary search tree
-* Hash Table(usando un vector de listas)
+* Hash Table (usando un vector de listas)
+* Fenwick Tree 
