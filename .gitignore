@@ -1,4 +1,7 @@
 .vscode
 /Geometry
 /GraphTheory/input
-DataStructures/input
+/GraphTheory/SSSPonDAG
+/GraphTheory/SSSPonDAG.cpp
+/DataStructures/input
+/Sorting/input

@@ -44,9 +44,9 @@ void startDFS(graph &A, int n, int m){                  //  Iniciar DFS
 int main(){
     int n;                                              //  Tamaño del grafo
     int m;                                              //  Número de vertices
+    cin >> n >> m;
     vector<vector<int> > A(n);                          //  Inicializar lista de adyacencia
 
-    cin >> n >> m;
     int a; int b;
     for(int i = 0; i < m; ++i){
         cin >> a >> b;

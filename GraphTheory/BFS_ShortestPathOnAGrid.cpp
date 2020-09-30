@@ -84,7 +84,22 @@ void display(graph &A, int n, int m){           //  Mostrar el grafo
 
 int main(){
     int n;    int m;                                              
+    cin >> n >> m;
     vector<vector<char> > A(n);     
+
+    for(int i = 0; i < n; ++i){
+        A[i] = vector<char> (m);
+        for(int j = 0; j < m; ++j){
+            cin >> A[i][j];
+        }
+    }
+
+    display(A, n, m);
+
+    cout <<  ShortestPath(A, n, m);
+
+    return 0;
+}
 
     /*  Ejemplos de uso
         10 15
@@ -99,18 +114,3 @@ int main(){
         # . # # # . . # . # . # . # .
         . . . . . . . . . # . # . . .
     */                    
-
-    cin >> n >> m;
-    for(int i = 0; i < n; ++i){
-        A[i] = vector<char> (m);
-        for(int j = 0; j < m; ++j){
-            cin >> A[i][j];
-        }
-    }
-
-    display(A, n, m);
-
-    cout <<  ShortestPath(A, n, m);
-
-    return 0;
-}

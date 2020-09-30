@@ -57,8 +57,21 @@ void topSort(graph &A, int n){
 }
 
 int main(){
-    int n;  int m;                                              
+    int n;  int m;   
+    cin >> n >> m;                                           
     vector<vector<int> > A(n);  
+
+    int a; int b;
+    for(int i = 0; i < m; ++i){
+        cin >> a >> b;
+        connectGraph(a, b, A);                              
+    }
+
+    displayGraph(A, n);
+    topSort(A, n);
+    
+    return 0;
+}
 
     // 13 18 Ejemplo
     // 0 3
@@ -79,16 +92,3 @@ int main(){
     // 9 11
     // 8 11
     // 10 9
-
-    cin >> n >> m;
-    int a; int b;
-    for(int i = 0; i < m; ++i){
-        cin >> a >> b;
-        connectGraph(a, b, A);                              
-    }
-
-    displayGraph(A, n);
-    topSort(A, n);
-    
-    return 0;
-}
