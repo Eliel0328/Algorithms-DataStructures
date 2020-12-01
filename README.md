@@ -14,6 +14,7 @@
 ##  Sorting
 
 * Insertion Sort
+* Bubble Sort
 
 ##  Graph Theory
 
